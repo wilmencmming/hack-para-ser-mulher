@@ -229,6 +229,7 @@ Migrating to CreateAuthors (20180818182430)
   ↳ c:/RailsInstaller/Ruby2.3.3/bin/rake:22
   [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ c:/RailsInstaller/Ruby2.3.3/bin/rake:22
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-08-18 16:02:10 -0300
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/gabriela.sanada/.rvm/rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
@@ -426,5 +427,247 @@ Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
   Rendered welcome/index.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 19ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/" for 127.0.0.1 at 2018-08-18 15:32:05 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 83ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2018-08-18 15:32:21 -0300
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:17
+  Rendered authors/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 94ms (Views: 61.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2018-08-18 15:32:30 -0300
+Processing by AuthorsController#new as HTML
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (19.9ms)
+  Rendered authors/new.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 142ms (Views: 107.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/authors" for 127.0.0.1 at 2018-08-18 15:33:01 -0300
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GwY8Pt6NALarSkxTChRgj/UUuKXkB3gbZOEOO7e1KVbOrpFwNSjdUaJRpNlv+DH1tqRh5BI/8APMaNaQdlHZjQ==", "author"=>{"name"=>"Maria", "job"=>"Nurse", "bio"=>"xo xo gossip girl", "contact"=>"marialinda@gmail.com"}, "commit"=>"Create Author"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:30
+  [1m[36mAuthor Create (2.0ms)[0m  [1m[32mINSERT INTO "authors" ("name", "job", "bio", "contact", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Maria"], ["job", "Nurse"], ["bio", "xo xo gossip girl"], ["contact", "marialinda@gmail.com"], ["created_at", "2018-08-18 18:33:01.581980"], ["updated_at", "2018-08-18 18:33:01.581980"]]
+  ↳ app/controllers/authors_controller.rb:30
+  [1m[35m (91.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:30
+Redirected to http://localhost:3000/authors/1
+Completed 302 Found in 104ms (ActiveRecord: 93.8ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2018-08-18 15:33:01 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:67
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 117ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors/" for 127.0.0.1 at 2018-08-18 15:33:09 -0300
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:17
+  Rendered authors/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 109ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors/" for 127.0.0.1 at 2018-08-18 15:38:19 -0300
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:17
+  Rendered authors/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 113ms (Views: 83.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-18 15:39:27 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 103ms (Views: 73.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2018-08-18 15:40:12 -0300
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:17
+  Rendered authors/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 83ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2018-08-18 15:42:13 -0300
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:17
+  Rendered authors/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 87ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-18 15:42:16 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 104ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:42:21 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (232.4ms)
+  Rendered articles/new.html.erb within layouts/application (259.3ms)
+Completed 200 OK in 364ms (Views: 324.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:43:16 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (4.0ms)
+  Rendered articles/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 118ms (Views: 94.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:43:18 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (6.0ms)
+  Rendered articles/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 121ms (Views: 96.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:43:53 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (6.0ms)
+  Rendered articles/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 119ms (Views: 97.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-18 15:44:13 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 102ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:44:21 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (4.0ms)
+  Rendered articles/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 123ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:45:34 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (6.0ms)
+  Rendered articles/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 105ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:46:16 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.0ms)
+  Rendered articles/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 101ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2018-08-18 15:46:42 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:17
+  Rendered authors/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 120ms (Views: 80.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-18 15:47:12 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 91ms (Views: 68.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:48:04 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (313.2ms)
+  Rendered articles/new.html.erb within layouts/application (335.1ms)
+Completed 200 OK in 430ms (Views: 401.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:49:06 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.0ms)
+  Rendered articles/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 137ms (Views: 111.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:50:45 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.0ms)
+  Rendered articles/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 109ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:50:58 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.0ms)
+  Rendered articles/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 124ms (Views: 95.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2018-08-18 16:02:38 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:67
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (4.0ms)
+  Rendered authors/edit.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 339ms (Views: 89.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2018-08-18 16:02:45 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:67
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (3.0ms)
+  Rendered authors/edit.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 113ms (Views: 81.9ms | ActiveRecord: 1.0ms)
+>>>>>>> 1502a334bcbeb5a702d77da26d19d4ce9b43b84b
 
 

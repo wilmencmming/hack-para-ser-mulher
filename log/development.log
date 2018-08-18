@@ -671,3 +671,159 @@ Completed 200 OK in 113ms (Views: 81.9ms | ActiveRecord: 1.0ms)
 >>>>>>> 1502a334bcbeb5a702d77da26d19d4ce9b43b84b
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-18 16:25:56 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gabriela.sanada/.rvm/rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-18 16:27:32 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-18 16:28:54 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-18 16:33:17 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles"}, missing required keys: [:id]):
+     6: 
+     7:   <body>
+     8:     <p>
+     9:      <%= link_to 'Artigo', article_path %>
+    10:     </p> 
+    11:     <%= yield %>
+    12:   </body>
+  
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___1806629723342865469_70349773733520'
+Started GET "/" for 127.0.0.1 at 2018-08-18 16:33:33 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-18 16:33:42 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 24ms (Views: 17.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-18 16:34:21 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-18 16:37:02 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_path' for #<#<Class:0x00007ff72aa279b0>:0x00007ff72a9b4fa0>):
+     8:     <p>
+     9:      <%= link_to 'Artigo', articles_path %>
+    10:      <%= link_to 'Autor', authors_path %>
+    11:      <%= link_to 'Home', welcome_path %>
+    12:     </p> 
+    13:     <%= yield %>
+    14:   </body>
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___1806629723342865469_70349774143240'
+Started GET "/" for 127.0.0.1 at 2018-08-18 16:37:23 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2018-08-18 16:37:30 -0300
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:17
+  Rendered authors/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2018-08-18 16:37:42 -0300
+Processing by AuthorsController#new as HTML
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (8.3ms)
+  Rendered authors/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 30ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/authors" for 127.0.0.1 at 2018-08-18 16:37:59 -0300
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m1gboJfwddd/T4sqCtIrlvGj426h4ktqz2tjqPtYVLjxeBIJacrLxcc1C6DKa2hKai9bldy2FmI9gRv0DY7KTQ==", "author"=>{"name"=>"Raquel", "job"=>"Analista", "bio"=>"Financeiro", "contact"=>"raquel.silva"}, "commit"=>"Create Author"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:30
+  [1m[36mAuthor Create (0.6ms)[0m  [1m[32mINSERT INTO "authors" ("name", "job", "bio", "contact", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Raquel"], ["job", "Analista"], ["bio", "Financeiro"], ["contact", "raquel.silva"], ["created_at", "2018-08-18 19:37:59.802804"], ["updated_at", "2018-08-18 19:37:59.802804"]]
+  ↳ app/controllers/authors_controller.rb:30
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:30
+Redirected to http://localhost:3000/authors/1
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2018-08-18 16:37:59 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:67
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-18 16:38:06 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2018-08-18 16:38:10 -0300
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:17
+  Rendered authors/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-18 16:38:13 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+

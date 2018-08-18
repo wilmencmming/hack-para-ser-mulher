@@ -189,3 +189,13 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 88ms (Views: 65.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-18 15:10:26 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (35.9ms)
+  Rendered articles/new.html.erb within layouts/application (63.8ms)
+Completed 200 OK in 190ms (Views: 134.1ms | ActiveRecord: 1.0ms)
+
+
